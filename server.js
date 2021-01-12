@@ -17,7 +17,6 @@ const db = knex({
       rejectUnauthorized: false
     }
   }
-
 });
 
 const users = db.select('*').from('users');
