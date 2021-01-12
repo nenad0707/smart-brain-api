@@ -26,7 +26,7 @@ app.use(cors());
 
 /*-----------------------         ROUTES       -------------------*/
 
-app.get('/', (req, res) => { res.send("it is working"); });
+app.get('/', (req, res) => { res.send(`it is working ${db.raw}`); });
 
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, bcrypt, db); });
 
